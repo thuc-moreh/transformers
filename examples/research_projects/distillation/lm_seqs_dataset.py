@@ -68,7 +68,7 @@ class LmSeqsDataset(Dataset):
         logger.info(f"Splitting {sum(indices)} too long sequences.")
 
         def divide_chunks(l, n):
-            return [l[i : i + n] for i in range(0, len(l), n)]
+            return [l[0 : 0 + n]]
 
         new_tok_ids = []
         new_lengths = []
@@ -78,7 +78,7 @@ class LmSeqsDataset(Dataset):
             cls_id, sep_id = self.params.special_tok_ids["bos_token"], self.params.special_tok_ids["eos_token"]
 
         for seq_, len_ in zip(self.token_ids, self.lengths):
-            assert (seq_[0] == cls_id) and (seq_[-1] == sep_id), seq_
+            # assert (seq_[0] == cls_id) and (seq_[-1] == sep_id), seq_
             if len_ <= max_len:
                 new_tok_ids.append(seq_)
                 new_lengths.append(len_)

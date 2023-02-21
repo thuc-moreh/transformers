@@ -96,34 +96,39 @@ def freeze_token_type_embeddings(student, args):
 
 def main():
     parser = argparse.ArgumentParser(description="Training")
-    parser.add_argument("--force", action="store_true", help="Overwrite dump_path if it already exists.")
+    parser.add_argument("--force", action="store_true", help="Overwrite dump_path if it already exists.",
+    default=True)
 
     parser.add_argument(
-        "--dump_path", type=str, required=True, help="The output directory (log, checkpoints, parameters, etc.)"
+        "--dump_path", type=str, help="The output directory (log, checkpoints, parameters, etc.)",
+        default="serialization_dir/my_first_training"
     )
     parser.add_argument(
         "--data_file",
         type=str,
-        required=True,
         help="The binarized file (tokenized + tokens_to_ids) and grouped by sequence.",
+        default="data/binarized_text.bert-base-uncased.pickle"
     )
 
     parser.add_argument(
         "--student_type",
         type=str,
         choices=["distilbert", "roberta", "gpt2"],
-        required=True,
         help="The student type (DistilBERT, RoBERTa).",
+        default="distilbert"
     )
-    parser.add_argument("--student_config", type=str, required=True, help="Path to the student configuration.")
+    parser.add_argument("--student_config", type=str, help="Path to the student configuration.",
+                        default="training_configs/distilbert-base-uncased.json")
     parser.add_argument(
         "--student_pretrained_weights", default=None, type=str, help="Load student initialization checkpoint."
     )
 
     parser.add_argument(
-        "--teacher_type", choices=["bert", "roberta", "gpt2"], required=True, help="Teacher type (BERT, RoBERTa)."
+        "--teacher_type", choices=["bert", "roberta", "gpt2"], help="Teacher type (BERT, RoBERTa).",
+        default="bert"
     )
-    parser.add_argument("--teacher_name", type=str, required=True, help="The teacher model.")
+    parser.add_argument("--teacher_name", type=str, help="The teacher model.",
+                        default="bert-base-uncased")
 
     parser.add_argument("--temperature", default=2.0, type=float, help="Temperature for the softmax temperature.")
     parser.add_argument(
@@ -131,18 +136,19 @@ def main():
     )
     parser.add_argument(
         "--alpha_mlm",
-        default=0.0,
+        default=2.0,
         type=float,
         help="Linear weight for the MLM loss. Must be >=0. Should be used in conjunction with `mlm` flag.",
     )
-    parser.add_argument("--alpha_clm", default=0.5, type=float, help="Linear weight for the CLM loss. Must be >=0.")
+    parser.add_argument("--alpha_clm", default=0.0, type=float, help="Linear weight for the CLM loss. Must be >=0.")
     parser.add_argument("--alpha_mse", default=0.0, type=float, help="Linear weight of the MSE loss. Must be >=0.")
     parser.add_argument(
-        "--alpha_cos", default=0.0, type=float, help="Linear weight of the cosine embedding loss. Must be >=0."
+        "--alpha_cos", default=1.0, type=float, help="Linear weight of the cosine embedding loss. Must be >=0."
     )
 
     parser.add_argument(
-        "--mlm", action="store_true", help="The LM step: MLM or CLM. If `mlm` is True, the MLM is used over CLM."
+        "--mlm", action="store_true", help="The LM step: MLM or CLM. If `mlm` is True, the MLM is used over CLM.",
+        default=True
     )
     parser.add_argument(
         "--mlm_mask_prop",
@@ -159,7 +165,8 @@ def main():
         type=float,
         help="Smoothing parameter to emphasize more rare tokens (see XLM, similar to word2vec).",
     )
-    parser.add_argument("--token_counts", type=str, help="The token counts in the data_file for MLM.")
+    parser.add_argument("--token_counts", type=str, help="The token counts in the data_file for MLM.",
+    default="data/token_counts.bert-base-uncased.pickle")
 
     parser.add_argument(
         "--restrict_ce_to_mask",
@@ -273,7 +280,15 @@ def main():
         token_probs = torch.from_numpy(token_probs)
     else:
         token_probs = None
-
+    # Fix inhomogeneous array length bug
+    max_len = max([sequence.shape[0] for sequence in data])
+    
+    for i, sequence in enumerate(data):
+        if sequence.shape[0] < max_len:
+            # sequence[-1] = 0
+            sequence = np.pad(sequence, (0, max_len - sequence.shape[0]), 'constant', constant_values=1)
+            # sequence[-1] = 102 # 102 is the id of the [SEP] token
+            data[i] = sequence
     train_lm_seq_dataset = LmSeqsDataset(params=args, data=data)
     logger.info("Data loader created.")
 
