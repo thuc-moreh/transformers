@@ -107,7 +107,7 @@ def main():
         "--data_file",
         type=str,
         help="The binarized file (tokenized + tokens_to_ids) and grouped by sequence.",
-        default="data/binarized_text.bert-base-uncased.pickle"
+        default="data/binarized_text.roberta-base.pickle"
     )
 
     parser.add_argument(
@@ -115,20 +115,20 @@ def main():
         type=str,
         choices=["distilbert", "roberta", "gpt2"],
         help="The student type (DistilBERT, RoBERTa).",
-        default="distilbert"
+        default="roberta"
     )
     parser.add_argument("--student_config", type=str, help="Path to the student configuration.",
-                        default="training_configs/distilbert-base-uncased.json")
+                        default="training_configs/distilroberta-base.json")
     parser.add_argument(
         "--student_pretrained_weights", default=None, type=str, help="Load student initialization checkpoint."
     )
 
     parser.add_argument(
         "--teacher_type", choices=["bert", "roberta", "gpt2"], help="Teacher type (BERT, RoBERTa).",
-        default="bert"
+        default="roberta"
     )
     parser.add_argument("--teacher_name", type=str, help="The teacher model.",
-                        default="bert-base-uncased")
+                        default="distilroberta-base")
 
     parser.add_argument("--temperature", default=2.0, type=float, help="Temperature for the softmax temperature.")
     parser.add_argument(
@@ -166,7 +166,7 @@ def main():
         help="Smoothing parameter to emphasize more rare tokens (see XLM, similar to word2vec).",
     )
     parser.add_argument("--token_counts", type=str, help="The token counts in the data_file for MLM.",
-    default="data/token_counts.bert-base-uncased.pickle")
+    default="data/token_counts.roberta-base.pickle")
 
     parser.add_argument(
         "--restrict_ce_to_mask",
@@ -177,7 +177,8 @@ def main():
         "--freeze_pos_embs",
         action="store_true",
         help="Freeze positional embeddings during distillation. For student_type in ['roberta', 'gpt2'] only.",
-    )
+        default=True
+        )
     parser.add_argument(
         "--freeze_token_type_embds",
         action="store_true",
@@ -185,7 +186,7 @@ def main():
     )
 
     parser.add_argument("--n_epoch", type=int, default=1, help="Number of pass on the whole dataset.")
-    parser.add_argument("--batch_size", type=int, default=32, help="Batch size (for each process).")
+    parser.add_argument("--batch_size", type=int, default=16, help="Batch size (for each process).")
     parser.add_argument(
         "--group_by_size",
         action="store_false",

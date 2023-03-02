@@ -31,12 +31,12 @@ if __name__ == "__main__":
         description="Token Counts for smoothing the masking probabilities in MLM (cf XLM/word2vec)"
     )
     parser.add_argument(
-        "--data_file", type=str, default="data/dump.bert-base-uncased.pickle", help="The binarized dataset."
+        "--data_file", type=str, default="data/dump.roberta-base.pickle", help="The binarized dataset."
     )
     parser.add_argument(
-        "--token_counts_dump", type=str, default="data/token_counts.bert-base-uncased.pickle", help="The dump file."
+        "--token_counts_dump", type=str, default="data/token_counts.roberta-base.pickle", help="The dump file."
     )
-    parser.add_argument("--vocab_size", default=30522, type=int)
+    parser.add_argument("--vocab_size", default=50265, type=int) #Change this to 30522 for BERT
     args = parser.parse_args()
 
     logger.info(f"Loading data from {args.data_file}")
@@ -49,8 +49,10 @@ if __name__ == "__main__":
         counter.update(tk_ids)
     counts = [0] * args.vocab_size
     for k, v in counter.items():
-        counts[k] = v
-
+        try:
+            counts[k] = v
+        except IndexError:
+            continue
     logger.info(f"Dump to {args.token_counts_dump}")
     with open(args.token_counts_dump, "wb") as handle:
         pickle.dump(counts, handle, protocol=pickle.HIGHEST_PROTOCOL)

@@ -37,8 +37,8 @@ def main():
         description="Preprocess the data to avoid re-doing it several times by (tokenization + token_to_ids)."
     )
     parser.add_argument("--file_path", type=str, default="data/dump.txt", help="The path to the data.")
-    parser.add_argument("--tokenizer_type", type=str, default="bert", choices=["bert", "roberta", "gpt2"])
-    parser.add_argument("--tokenizer_name", type=str, default="bert-base-uncased", help="The tokenizer to use.")
+    parser.add_argument("--tokenizer_type", type=str, default="roberta", choices=["bert", "roberta", "gpt2"])
+    parser.add_argument("--tokenizer_name", type=str, default="roberta-base", help="The tokenizer to use.")
     parser.add_argument("--dump_file", type=str, default="data/dump", help="The dump file prefix.")
     args = parser.parse_args()
 
@@ -69,7 +69,7 @@ def main():
     start = time.time()
     for text in data:
         text = f"{bos} {text.strip()} {sep}"
-        token_ids = tokenizer.encode(text, add_special_tokens=False)
+        token_ids = tokenizer.encode(text, add_special_tokens=False, truncation=True, max_length=512)
         rslt.append(token_ids)
 
         iter += 1
