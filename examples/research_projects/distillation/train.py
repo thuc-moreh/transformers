@@ -184,8 +184,8 @@ def main():
         help="Freeze token type embeddings during distillation if existent. For student_type in ['roberta'] only.",
     )
 
-    parser.add_argument("--n_epoch", type=int, default=3, help="Number of pass on the whole dataset.")
-    parser.add_argument("--batch_size", type=int, default=5, help="Batch size (for each process).")
+    parser.add_argument("--n_epoch", type=int, default=1, help="Number of pass on the whole dataset.")
+    parser.add_argument("--batch_size", type=int, default=100, help="Batch size (for each process).")
     parser.add_argument(
         "--group_by_size",
         action="store_false",
