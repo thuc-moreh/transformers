@@ -1,3 +1,16 @@
+# Training distilroberta on nvidia A100 GPU
+1. Create and activate conda env
+```bash
+cd ./transformers/examples/research_projects/distillation
+conda env create -f nvidia_env.yml
+conda activate distilbert
+```
+2. Train distilroberta on nvidia A100 GPU
+```bash
+bash train_distilroberta.sh
+```
+
+# Below is the original README
 # Distil*
 
 Author: @VictorSanh
