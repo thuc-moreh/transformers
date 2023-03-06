@@ -1,3 +1,22 @@
+# Training distilroberta on Moreh's VM
+1. Create and activate conda env
+```bash
+cd ./transformers/examples/research_projects/distillation
+conda env create -f moreh_env.yml
+conda activate distilbert
+```
+Update moreh
+```bash
+update-moreh --force --target 23.3.0
+```
+
+2. Train distilroberta on Moreh's VM
+```bash
+bash train_distilroberta.sh
+```
+
+# Below is the original README
+
 # Distil*
 
 Author: @VictorSanh

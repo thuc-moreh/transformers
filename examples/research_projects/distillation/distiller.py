@@ -343,7 +343,7 @@ class Distiller:
                 torch.distributed.barrier()
 
             iter_bar = tqdm(self.dataloader, desc="-Iter", disable=self.params.local_rank not in [-1, 0])
-            for batch in iter_bar:
+            for index, batch in enumerate(iter_bar):
                 if self.params.n_gpu > 0:
                     batch = tuple(t.to(f"cuda:{self.params.local_rank}") for t in batch)
 
@@ -353,10 +353,11 @@ class Distiller:
                     token_ids, attn_mask, lm_labels = self.prepare_batch_clm(batch=batch)
                 self.step(input_ids=token_ids, attention_mask=attn_mask, lm_labels=lm_labels)
 
-                iter_bar.update()
-                iter_bar.set_postfix(
-                    {"Last_loss": f"{self.last_loss:.2f}", "Avg_cum_loss": f"{self.total_loss_epoch/self.n_iter:.2f}"}
-                )
+                if index%20 == 0:
+                    iter_bar.update()
+                    iter_bar.set_postfix(
+                        {"Last_loss": f"{self.last_loss:.2f}", "Avg_cum_loss": f"{self.total_loss_epoch/self.n_iter:.2f}"}
+                    )
             iter_bar.close()
 
             if self.is_master:
