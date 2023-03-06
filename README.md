@@ -15,6 +15,7 @@ limitations under the License.
 -->
 # Instructions for training Distil* models on nvidia a100 and Moreh's VM
 Step 1: Cd to ./transformers/examples/research_projects/distillation
+
 Step 2: Checkout appropriate branch for training Distil* models on each type of VM
 
 <p align="center">
