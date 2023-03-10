@@ -1,0 +1,30 @@
+[2023-03-10 17:35:44.732] [info] Requesting resources for KT AI Accelerator from the server...
+[2023-03-10 17:35:45.747] [info] Initializing the worker daemon for KT AI Accelerator
+[2023-03-10 17:35:49.176] [info] [1/1] Connecting to resources on the server (192.168.110.7:24156)...
+[2023-03-10 17:35:49.188] [info] Establishing links to the resources...
+[2023-03-10 17:35:49.244] [info] KT AI Accelerator is ready to use.
+03/10/2023 17:35:50 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+03/10/2023 17:35:54 - WARNING - datasets.builder - Found cached dataset wikitext (/home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+03/10/2023 17:36:01 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-73ef7591e5d403fc.arrow
+03/10/2023 17:36:01 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-b07ff2191dc683bb.arrow
+03/10/2023 17:36:01 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-7abdf5c1bd28c64b.arrow
+03/10/2023 17:36:01 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-f07fdc8dc625875e.arrow
+03/10/2023 17:36:01 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-8a7e814aab55ec14.arrow
+03/10/2023 17:36:01 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-88ef8b32931b8f1c.arrow
+{'train_runtime': 82.4161, 'train_samples_per_second': 166.751, 'train_steps_per_second': 0.437, 'train_loss': 9.351593865288628, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =     9.3516
+  train_runtime            = 0:01:22.41
+  train_samples            =       4581
+  train_samples_per_second =    166.751
+  train_steps_per_second   =      0.437
+***** eval metrics *****
+  epoch                   =        3.0
+  eval_accuracy           =     0.0033
+  eval_loss               =        nan
+  eval_runtime            = 0:00:02.21
+  eval_samples            =        476
+  eval_samples_per_second =    215.149
+  eval_steps_per_second   =      0.904
+  perplexity              =        nan
