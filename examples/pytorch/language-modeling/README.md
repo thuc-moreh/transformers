@@ -14,6 +14,25 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
+# Instructions for training GPT, GPT2, and DistilGPT2 on Moreh's VM
+
+Step 1: Cd to ./transformers/examples/pytorch/language-modeling
+
+Step 2: Create conda env and install moreh
+```bash
+conda env create -f nvidia_env.yml
+conda activate language-modeling
+update-moreh --force --target 23.3.0
+```
+Step 3: Run the training scripts
+```bash
+bash train_clm.sh
+```
+You can change the model using --model_name_or_path, and change the batch size using --per_device_train_batch_size for training and --per_device_eval_batch_size for evaluation.
+The logs is stored in training_logs
+
+# Below is the original README
+
 ## Language model training
 
 Fine-tuning (or training from scratch) the library models for language modeling on a text dataset for GPT, GPT-2,
