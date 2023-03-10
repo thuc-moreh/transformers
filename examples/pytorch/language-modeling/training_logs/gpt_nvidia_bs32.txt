@@ -1,0 +1,23 @@
+03/10/2023 08:18:20 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+03/10/2023 08:18:24 - WARNING - datasets.builder - Found cached dataset wikitext (/nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+03/10/2023 08:18:32 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-73ef7591e5d403fc.arrow
+03/10/2023 08:18:35 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-be4fd1f8e47109b8.arrow
+03/10/2023 08:18:35 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-f07fdc8dc625875e.arrow
+03/10/2023 08:18:38 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-c536b4c3072ed72e.arrow
+{'train_runtime': 457.8651, 'train_samples_per_second': 30.015, 'train_steps_per_second': 0.944, 'train_loss': 3.788956818757234, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =      3.789
+  train_runtime            = 0:07:37.86
+  train_samples            =       4581
+  train_samples_per_second =     30.015
+  train_steps_per_second   =      0.944
+***** eval metrics *****
+  epoch                   =        3.0
+  eval_accuracy           =     0.3697
+  eval_loss               =     3.6644
+  eval_runtime            = 0:00:06.41
+  eval_samples            =        476
+  eval_samples_per_second =     74.209
+  eval_steps_per_second   =      2.339
+  perplexity              =     39.032
