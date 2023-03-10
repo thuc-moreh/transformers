@@ -13,10 +13,18 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-# Instructions for training Distil* models on nvidia a100 and Moreh's VM
+# Instructions for training HF models with and without Trainer API
+### Instructions for training Distil* models on nvidia a100 and Moreh's VM without Trainer API
+
 Step 1: Cd to ./transformers/examples/research_projects/distillation
 
-Step 2: Checkout appropriate branch for training Distil* models on each type of VM
+Step 2: Checkout nvidia/distil* and moreh/distil* for training Distil* models on each type of VM
+
+### Instructions for training language models on nvidia a100 and Moreh's VM with Trainer API
+
+Step 1: Cd to ./transformers/examples/pytorch/language-modeling/
+
+Step 2: Checkout nvidia/language-modelling and moreh/language-modelling branches for training language models on nvidia and moreh framework repectively
 
 <p align="center">
     <br>
