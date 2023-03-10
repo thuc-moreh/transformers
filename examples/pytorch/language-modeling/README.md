@@ -20,7 +20,7 @@ Step 1: Cd to ./transformers/examples/pytorch/language-modeling
 
 Step 2: Create conda env and install moreh
 ```bash
-conda env create -f nvidia_env.yml
+conda env create -f moreh_env.yml
 conda activate language-modeling
 update-moreh --force --target 23.3.0
 ```
