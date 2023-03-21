@@ -1,0 +1,28 @@
+[2023-03-16 11:11:39.027] [info] Requesting resources for KT AI Accelerator from the server...
+[2023-03-16 11:11:40.039] [info] Initializing the worker daemon for KT AI Accelerator
+[2023-03-16 11:11:41.506] [info] [1/1] Connecting to resources on the server (192.168.110.1:24164)...
+[2023-03-16 11:11:41.515] [info] Establishing links to the resources...
+[2023-03-16 11:11:41.573] [info] KT AI Accelerator is ready to use.
+03/16/2023 11:11:42 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+03/16/2023 11:11:46 - WARNING - datasets.builder - Found cached dataset wikitext (/home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+03/16/2023 11:11:50 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-4e714208f4c313d1.arrow
+03/16/2023 11:11:54 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-c28ce2b75c9e6fcc.arrow
+03/16/2023 11:11:54 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-4b813f2a63985f5c.arrow
+03/16/2023 11:11:59 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/ubuntu/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-3ea164683080d07c.arrow
+{'train_runtime': 165.9065, 'train_samples_per_second': 94.372, 'train_steps_per_second': 0.488, 'train_loss': 8.079262815875772, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =     8.0793
+  train_runtime            = 0:02:45.90
+  train_samples            =       5219
+  train_samples_per_second =     94.372
+  train_steps_per_second   =      0.488
+***** eval metrics *****
+  epoch                   =        3.0
+  eval_accuracy           =        0.0
+  eval_loss               =        nan
+  eval_runtime            = 0:00:02.77
+  eval_samples            =        540
+  eval_samples_per_second =    194.589
+  eval_steps_per_second   =      1.081
+  perplexity              =        nan
