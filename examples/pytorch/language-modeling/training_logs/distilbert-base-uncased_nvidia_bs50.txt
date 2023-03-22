@@ -1,0 +1,25 @@
+03/16/2023 02:38:11 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+03/16/2023 02:38:16 - WARNING - datasets.builder - Found cached dataset wikitext (/nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+03/16/2023 02:38:41 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-bd4ed326e56ddb80.arrow
+03/16/2023 02:38:41 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-1f7e603c44d88848.arrow
+03/16/2023 02:38:41 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-d1ca3920042148ba.arrow
+03/16/2023 02:38:41 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-510f5138846c6a96.arrow
+03/16/2023 02:38:41 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-a675ea2497417142.arrow
+03/16/2023 02:38:41 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-72e1e5b4dbdc8de8.arrow
+{'train_runtime': 239.1555, 'train_samples_per_second': 58.042, 'train_steps_per_second': 1.167, 'train_loss': 2.0073360320060485, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =     2.0073
+  train_runtime            = 0:03:59.15
+  train_samples            =       4627
+  train_samples_per_second =     58.042
+  train_steps_per_second   =      1.167
+***** eval metrics *****
+  epoch                   =        3.0
+  eval_accuracy           =     0.6292
+  eval_loss               =     1.8009
+  eval_runtime            = 0:00:03.22
+  eval_samples            =        479
+  eval_samples_per_second =    148.326
+  eval_steps_per_second   =      3.097
+  perplexity              =      6.055

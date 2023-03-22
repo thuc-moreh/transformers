@@ -1,0 +1,19 @@
+03/16/2023 03:06:46 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+03/16/2023 03:06:50 - WARNING - datasets.builder - Found cached dataset wikitext (/nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+{'train_runtime': 406.1526, 'train_samples_per_second': 38.55, 'train_steps_per_second': 0.968, 'train_loss': 1.8632099646648377, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =     1.8632
+  train_runtime            = 0:06:46.15
+  train_samples            =       5219
+  train_samples_per_second =      38.55
+  train_steps_per_second   =      0.968
+***** eval metrics *****
+  epoch                   =        3.0
+  eval_accuracy           =     0.6802
+  eval_loss               =     1.7243
+  eval_runtime            = 0:00:05.23
+  eval_samples            =        540
+  eval_samples_per_second =    103.226
+  eval_steps_per_second   =      2.676
+  perplexity              =     5.6085
