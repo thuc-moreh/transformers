@@ -1,0 +1,11 @@
+03/22/2023 08:42:02 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+03/22/2023 08:42:07 - WARNING - datasets.builder - Found cached dataset wmt16 (/nas/common_data/huggingface/wmt16/ro-en/1.0.0/746749a11d25c02058042da7502d973ff410e73457f3d305fc1177dc0e8c4227)
+03/22/2023 08:42:13 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wmt16/ro-en/1.0.0/746749a11d25c02058042da7502d973ff410e73457f3d305fc1177dc0e8c4227/cache-7567e98f8a36f521.arrow
+{'train_runtime': 104.1794, 'train_samples_per_second': 287.965, 'train_steps_per_second': 1.613, 'train_loss': 0.6619774046398345, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =      0.662
+  train_runtime            = 0:01:44.17
+  train_samples            =      10000
+  train_samples_per_second =    287.965
+  train_steps_per_second   =      1.613
