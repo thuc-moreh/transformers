@@ -1,0 +1,17 @@
+[2023-03-22 18:05:58.121] [info] Requesting resources for KT AI Accelerator from the server...
+[2023-03-22 18:05:59.135] [warning] A newer version of Moreh AI Framework is available. You can update the software to the latest version by running "update-moreh".
+[2023-03-22 18:05:59.135] [info] Initializing the worker daemon for KT AI Accelerator
+[2023-03-22 18:06:00.603] [info] [1/1] Connecting to resources on the server (192.168.110.31:24173)...
+[2023-03-22 18:06:00.612] [info] Establishing links to the resources...
+[2023-03-22 18:06:00.650] [info] KT AI Accelerator is ready to use.
+03/22/2023 18:06:01 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+03/22/2023 18:06:06 - WARNING - datasets.builder - Found cached dataset wmt16 (/nas/common_data/huggingface/wmt16/ro-en/1.0.0/746749a11d25c02058042da7502d973ff410e73457f3d305fc1177dc0e8c4227)
+03/22/2023 18:06:12 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wmt16/ro-en/1.0.0/746749a11d25c02058042da7502d973ff410e73457f3d305fc1177dc0e8c4227/cache-7567e98f8a36f521.arrow
+{'train_runtime': 99.5722, 'train_samples_per_second': 301.289, 'train_steps_per_second': 0.572, 'train_loss': 0.6738670750668174, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =     0.6739
+  train_runtime            = 0:01:39.57
+  train_samples            =      10000
+  train_samples_per_second =    301.289
+  train_steps_per_second   =      0.572
