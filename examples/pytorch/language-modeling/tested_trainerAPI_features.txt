@@ -1,0 +1,76 @@
+gradient_accumulation_steps 2
+eval_accumulation_steps 2
+eval_delay 2
+adam_beta1 0.9
+adam_beta2 0.999
+adam_epsilon 1e-8
+max_grad_norm 1.0
+max_steps -1 
+warmup_ratio 0.5
+log_level passive
+log_level_replica warning
+log_on_each_node True
+logging_dir tmp
+logging_nan_inf_filter True
+save_strategy epoch
+save_steps 5
+no_cuda True
+seed 42
+data_seed 42
+jit_mode_eval True
+use_ipex True --> skip because moreh already has a compiler
+bf16 --> upgrade torch to 1.10.0 or 1.13.0. Still not working because it requires CUDA
+fp16 True 
+fp16_opt_level O2
+half_precision_backend auto
+bf16_full_eval True --> upgrade torch to 1.10.0 or 1.13.0. Still not working because it requires CUDA
+fp16_full_eval True
+tf32 True --> upgrade torch to 1.10.0 or 1.13.0. Still not working because it requires CUDA
+local_rank -1
+xpu_backend mpi
+tpu_num_cores --> skip, not running on tpu
+dataloader_drop_last True
+eval_steps 1
+dataloader_num_workers 2
+past_index 2 --> skip, not sure what this is. Get similiar errors when running on moreh and nvidia gpu
+run_name wandb
+disable_tqdm True
+remove_unused_columns True
+label_names ["a", "b"] ->don't know how this works
+load_best_model_at_end True
+metric_for_best_model True
+greater_is_better True
+ignore_data_skip True
+sharded_ddp -> skip because moreh already has automated distributed training
+fsdp
+fsdp_config
+deepspeed -> its installation relies on nvcc
+label_smoothing_factor 0.1
+debug True
+optim "adamw_hf"
+optim_args "momentum_dtype=bf1oat16" (add --optim adamw_anyprecision, can't install torchdistx. Get seg fault error when upgrading to torch 1.13.1) 
+group_by_length True
+length_column_name length
+report_to all
+ddp_find_unused_parameters -> skip because moreh already has automated distributed training
+ddp_bucket_cap_mb -> skip because moreh already has automated distributed training
+dataloader_pin_memory True
+skip_memory_metrics False
+push_to_hub True -> for pushing trained models to huggingface hub, skipped
+resume_from_checkpoint -> skip. already implemented in training scripts. This feature is not supposed to used directly by trainerAPI
+hub_model_id -> skip
+hub_strategy -> skip
+hub_token -> skip
+hub_private_repo -> skip
+gradient_checkpointing True -> The training runs but not sure if it's correct. See the logs.
+include_inputs_for_metrics False
+auto_find_batch_size True
+full_determinism -> upgrade to torch >1.7
+torchdynamo -> skip because moreh already has a compiler
+ray_scope last
+ddp_timeout -> skip because moreh already has automated distributed training
+use_mps_device -> skip. This is for running on apple chip
+torch_compile -> skip because moreh already has a compiler. This also needs pytorch 2.0
+torch_compile_backend -> skip because moreh already has a compiler. This also needs pytorch 2.0
+torch_compile_mode -> skip because moreh already has a compiler. This also needs pytorch 2.0
+
