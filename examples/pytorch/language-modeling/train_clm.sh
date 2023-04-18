@@ -10,10 +10,9 @@ python run_clm.py \
     --do_train \
     --do_eval \
     --do_predict \
-    --overwrite_output_dir \
-    --output_dir /tmp/test-clm 
-    # --optim adamw_anyprecision \
-    # --optim_args "momentum_dtype=bf1oat16"
+    --output_dir /tmp/test-clm \
+    --overwrite_output_dir
+    
     
 
 
