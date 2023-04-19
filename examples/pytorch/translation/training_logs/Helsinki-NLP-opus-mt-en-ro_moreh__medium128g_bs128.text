@@ -1,0 +1,15 @@
+[2023-04-19 17:46:38.975] [info] Requesting resources for KT AI Accelerator from the server...
+[2023-04-19 17:46:39.991] [info] Initializing the worker daemon for KT AI Accelerator
+[2023-04-19 17:46:41.529] [info] [1/1] Connecting to resources on the server (192.168.110.16:24168)...
+[2023-04-19 17:46:41.541] [info] Establishing links to the resources...
+[2023-04-19 17:46:41.578] [info] KT AI Accelerator is ready to use.
+04/19/2023 17:46:41 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+04/19/2023 17:46:43 - WARNING - datasets.builder - Found cached dataset wmt16 (/nas/common_data/huggingface/wmt16/ro-en/1.0.0/746749a11d25c02058042da7502d973ff410e73457f3d305fc1177dc0e8c4227)
+{'train_runtime': 130.1527, 'train_samples_per_second': 115.249, 'train_steps_per_second': 0.922, 'train_loss': 0.788787841796875, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =     0.7888
+  train_runtime            = 0:02:10.15
+  train_samples            =       5000
+  train_samples_per_second =    115.249
+  train_steps_per_second   =      0.922
