@@ -1,0 +1,16 @@
+[2023-04-19 18:10:51.435] [info] Requesting resources for KT AI Accelerator from the server...
+[2023-04-19 18:10:52.453] [info] Initializing the worker daemon for KT AI Accelerator
+[2023-04-19 18:10:53.866] [info] [1/1] Connecting to resources on the server (192.168.110.45:24168)...
+[2023-04-19 18:10:53.875] [info] Establishing links to the resources...
+[2023-04-19 18:10:53.913] [info] KT AI Accelerator is ready to use.
+04/19/2023 18:10:54 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+04/19/2023 18:10:54 - WARNING - __main__ - You're running a t5 model but didn't provide a source prefix, which is expected, e.g. with `--source_prefix 'translate English to German: ' `
+04/19/2023 18:10:56 - WARNING - datasets.builder - Found cached dataset wmt16 (/nas/common_data/huggingface/wmt16/ro-en/1.0.0/746749a11d25c02058042da7502d973ff410e73457f3d305fc1177dc0e8c4227)
+{'train_runtime': 71.1437, 'train_samples_per_second': 210.841, 'train_steps_per_second': 1.181, 'train_loss': 1.5586615062895275, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =     1.5587
+  train_runtime            = 0:01:11.14
+  train_samples            =       5000
+  train_samples_per_second =    210.841
+  train_steps_per_second   =      1.181
