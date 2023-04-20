@@ -5,3 +5,20 @@
 [2023-04-20 16:52:40.235] [info] KT AI Accelerator is ready to use.
 04/20/2023 16:52:40 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
 04/20/2023 16:52:42 - WARNING - datasets.builder - Found cached dataset wikitext (/nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+{'train_runtime': 417.4895, 'train_samples_per_second': 32.918, 'train_steps_per_second': 1.035, 'train_loss': 3.788919519495081, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =     3.7889
+  train_runtime            = 0:06:57.48
+  train_samples            =       4581
+  train_samples_per_second =     32.918
+  train_steps_per_second   =      1.035
+***** eval metrics *****
+  epoch                   =        3.0
+  eval_accuracy           =       0.37
+  eval_loss               =     3.6641
+  eval_runtime            = 0:00:04.87
+  eval_samples            =        476
+  eval_samples_per_second =     97.679
+  eval_steps_per_second   =      3.078
+  perplexity              =    39.0223
