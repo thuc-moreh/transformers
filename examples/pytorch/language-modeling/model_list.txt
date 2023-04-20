@@ -2,3 +2,14 @@ albert-base-v1
 albert-base-v2
 pip install git+https://github.com/huggingface/transformersalbert-xxlarge-v2
 facebook/bart-large
+
+
+distilbert-base-uncased
+distilroberta-base
+gpt2
+distilgpt2
+
+gpt
+roberta-base
+distilroberta-base
+distilbert-base-uncased
