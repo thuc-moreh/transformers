@@ -1,0 +1,25 @@
+[2023-04-20 11:51:27.692] [info] Requesting resources for KT AI Accelerator from the server...
+[2023-04-20 11:51:28.721] [info] Initializing the worker daemon for KT AI Accelerator
+[2023-04-20 11:51:30.257] [info] [1/1] Connecting to resources on the server (192.168.110.24:24156)...
+[2023-04-20 11:51:30.269] [info] Establishing links to the resources...
+[2023-04-20 11:51:30.331] [info] KT AI Accelerator is ready to use.
+04/20/2023 11:51:30 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+04/20/2023 11:51:32 - WARNING - datasets.builder - Found cached dataset wikitext (/nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+{'loss': 3.1899, 'learning_rate': 2.1264367816091954e-05, 'epoch': 1.72}
+{'train_runtime': 749.0695, 'train_samples_per_second': 9.284, 'train_steps_per_second': 1.161, 'train_loss': 3.1306615369073274, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =     3.1307
+  train_runtime            = 0:12:29.06
+  train_samples            =       2318
+  train_samples_per_second =      9.284
+  train_steps_per_second   =      1.161
+***** eval metrics *****
+  epoch                   =        3.0
+  eval_accuracy           =     0.4259
+  eval_loss               =     3.0496
+  eval_runtime            = 0:00:07.86
+  eval_samples            =        240
+  eval_samples_per_second =     30.521
+  eval_steps_per_second   =      3.815
+  perplexity              =    21.1077

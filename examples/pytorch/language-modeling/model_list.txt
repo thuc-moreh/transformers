@@ -5,12 +5,12 @@ albert-xxlarge-v2
 facebook/bart-large
 
 
-distilbert-base-uncased
-distilroberta-base
-gpt2
-distilgpt2
+distilbert-base-uncased (MLM)
+distilroberta-base (MLM)
+gpt2 (CLM)
+distilgpt2 (CLM)
 
-gpt
-roberta-base
-distilroberta-base
-distilbert-base-uncased
+gpt (CLM)
+roberta- (MLM)
+distilroberta-base (MLM)
+distilbert-base-uncased (MLM)
