@@ -1,0 +1,19 @@
+[2023-05-09 23:41:06.813] [info] Requesting resources for KT AI Accelerator from the server...
+[2023-05-09 23:41:07.829] [info] Initializing the worker daemon for KT AI Accelerator
+[2023-05-09 23:41:09.352] [info] [1/1] Connecting to resources on the server (192.168.110.14:24158)...
+[2023-05-09 23:41:09.366] [info] Establishing links to the resources...
+[2023-05-09 23:41:09.422] [info] KT AI Accelerator is ready to use.
+05/09/2023 23:41:10 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+05/09/2023 23:41:13 - WARNING - datasets.builder - Found cached dataset wikitext (/nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+05/09/2023 23:41:19 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-9621ced0954e4072.arrow
+05/09/2023 23:41:19 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-edf67b6b24ec680b.arrow
+05/09/2023 23:41:19 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-9636d7e4aa00fca3.arrow
+05/09/2023 23:41:19 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126/cache-bfa9da81c9481f90.arrow
+{'train_runtime': 336.2356, 'train_samples_per_second': 42.809, 'train_steps_per_second': 0.428, 'train_loss': 1.4148771497938368, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  train_loss               =     1.4149
+  train_runtime            = 0:05:36.23
+  train_samples            =       4798
+  train_samples_per_second =     42.809
+  train_steps_per_second   =      0.428

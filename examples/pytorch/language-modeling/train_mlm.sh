@@ -1,4 +1,4 @@
-    #!/bin/bash
+#!/bin/bash
 
 #Train causal language model
 python run_mlm.py \

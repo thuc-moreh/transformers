@@ -1,0 +1,11 @@
+[2023-05-10 18:02:12.855] [info] Requesting resources for KT AI Accelerator from the server...
+[2023-05-10 18:02:13.873] [info] Initializing the worker daemon for KT AI Accelerator
+[2023-05-10 18:02:15.419] [info] [1/1] Connecting to resources on the server (192.168.110.15:24174)...
+[2023-05-10 18:02:15.430] [info] Establishing links to the resources...
+[2023-05-10 18:02:15.483] [info] KT AI Accelerator is ready to use.
+05/10/2023 18:02:26 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+05/10/2023 18:02:39 - WARNING - datasets.builder - Found cached dataset wikitext (/nas/common_data/huggingface/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+[2023-05-10 18:03:04.788] [error] min_N != 0, File "../frontend/compiler/data_parallel.cpp", line 3910
+[2023-05-10 18:03:04.799] [warning] Moreh AI Compiler has determined that the current execution pattern is not suitable for utilizing multiple physical devices well. We recommend you to use the smallest accelerator model instead.
+[2023-05-10 18:03:04.800] [info] The storage allocator in Moreh AI Compiler detects that the application requires more memory than available in at least one physical device of KT AI Accelerator.
+[2023-05-10 18:03:04.800] [info]   Required: 74300887040, available: 68702699520
