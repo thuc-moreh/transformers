@@ -16,5 +16,6 @@ dependencies:
     - sacrebleu >= 1.4.12
     - py7zr
     - evaluate
-    - dotenv
     - boto3
+    - matplotlib
+    - opencv-python
